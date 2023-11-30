@@ -2,8 +2,8 @@ class App {
     runApplication() {
         console.log("Hello world");
         //hier komt je code
-        //dit is code commentaar voor javascript
-        //dit is ook commentaar
+        //get by id
+        //get by class
     }
 }
 
