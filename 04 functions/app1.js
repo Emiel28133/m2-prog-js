@@ -73,7 +73,22 @@ class App {
         globalFunction()
         // code gaat hier!
     }
-}
 
+    newClassFunction()
+    {
+        console.log("hello world in the newClassFunction")
+
+    }
+
+    anotherFunctionWithArguments(aArgument)
+    {
+        console.log("kom maar met je argument");
+        console.log("hier:");
+        console.log(aArgument);
+    }
+
+}
 let app = new App();
 app.runApplication();
+app.newClassFunction();
+app.anotherFunctionWithArguments("mijn argument is iets...");
