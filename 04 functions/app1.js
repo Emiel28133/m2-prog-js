@@ -67,11 +67,34 @@ globalFunction()
 globalFunction()
 
 class App {
+    
+    marioFunction()
+    {
+        console.log("MARIO!!!")
+    }
+    
+    bwaFunction()
+    {
+        console.log("BWAHAHA!!!")
+        return;
+    }
+
+    numbersFunction()
+    {
+        let k =3;
+        let m =8;
+        let km =(k+m);
+        console.log(km);
+    }
+
     runApplication() 
     {
         console.log("Hello world");
         globalFunction()
         // code gaat hier!
+        this.marioFunction();
+        this.bwaFunction();
+        this.numbersFunction();
     }
 
     newClassFunction()
@@ -86,9 +109,12 @@ class App {
         console.log("hier:");
         console.log(aArgument);
     }
-
 }
+
 let app = new App();
 app.runApplication();
 app.newClassFunction();
 app.anotherFunctionWithArguments("mijn argument is iets...");
+app.marioFunction();
+app.bwaFunction();
+app.numbersFunction();

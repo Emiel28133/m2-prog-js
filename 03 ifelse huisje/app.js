@@ -9,11 +9,13 @@ class App
         let randomGetal = Math.random();
         console.log(randomGetal);
 
-    if(randomGetal > 0.5) 
-    {
-
-        g.beginPath()
-        g.fillStyle = "red";
+        {
+            
+            g.beginPath()
+            if(randomGetal > 0.5) 
+            g.fillStyle = "red";
+        else
+        g.fillStyle = "yellow"
         g.moveTo(300,100);
         g.lineTo(700,200);
         g.lineTo(600,400);
