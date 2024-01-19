@@ -23,24 +23,23 @@ class App {
 
         let headersByClass = document.getElementsByClassName("BandName");
 
-        for (let piss = 0; piss < headersByClass.length; piss++) {
-            
-            console.log(headersByClass[piss].innerText);
-        }
-
-        for (let i = 0; i < headersByClass.length; i++) {
-            headersByClass[i].innerText = "huh????";
-        }
-
         headersByClass[0].innerText = "niews";
         headersByClass[1].innerText = "reviews";
         headersByClass[2].innerText = "commentaar";
         headersByClass[3].innerText = "Opinions";
         headersByClass[4].innerText = "Features";
-        headersByClass[5].innerText = "Interviews";
-        headersByClass[6].innerText = "Analysis";
-        headersByClass[7].innerText = "ik wil";
-        headersByClass[8].innerText = "naar huis";
+
+
+        let data = ["niews", "reviews", "commentaar", "opinion", "features"];
+
+        for (let i = 0; i < headersByClass.length && i < data.length; i++) {
+            headersByClass[i].innerText = i + ": " + data[i];
+            console.log(headersByClass[i].innerText)
+        }
+
+        
+
+
     }
 }
 
