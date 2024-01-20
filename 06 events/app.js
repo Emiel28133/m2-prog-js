@@ -1,15 +1,17 @@
 class App {
     runApplication() {
         console.log("Hello world");
+
+        let uiButton = document.getElementById("myButton");
+
         
-
-        let uiButton = document.getElementById("myButton"); 
-
-        let localFunction = function (e) { 
+        uiButton.addEventListener("click",(e)=>
+        {
             console.log("click!");
-        };
+        });
 
-        uiButton.addEventListener("click", localFunction);
+        
+        
     }
 }
 
