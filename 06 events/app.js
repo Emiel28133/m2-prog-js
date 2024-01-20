@@ -1,11 +1,11 @@
 class App {
     runApplication() {
         console.log("Hello world");
-        //code goes here!
+        
 
-        let uiButton = document.getElementById("myButton"); // Fixed the missing quotation marks around "myButton"
+        let uiButton = document.getElementById("myButton"); 
 
-        let localFunction = function (e) { // Fixed the typo "console,log" to "console.log"
+        let localFunction = function (e) { 
             console.log("click!");
         };
 
