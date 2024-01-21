@@ -1,29 +1,34 @@
 class Dino {
-    constructor() {
-        this.naam = "Pik";
-        this.vleeseter = true;
-        this.leeftijd = 7;
+    eatFood(foodToEat) {
+        foodToEat.leeft=false;
+        this.honger=false;
+        console.log("ik ben een " + this.naam)
+        console.log("mijn honger: " + this.honger)
+    }
+
+    constructor(naam, vleeseter, leeftijd) {
+        this.naam = naam;
+        this.vleeseter = vleeseter;
+        this.leeftijd = leeftijd;
+        this.leeft = true;
+        this.honger = true;
     }
 }
-
-
-
-
 
 class App {
     runApplication() {
         console.log("Hello world");
 
-        let dino = new Dino("pik", true, 7);
-        console.log(dino);
+        let trex = new Dino("T-Rex", true, 10);
+        let triceratops = new Dino("Triceratops", false, 20);
 
-        console.log("de leeftijd van deze " + dino.naam + " is: " + dino.leeftijd);
-        console.log("en deze " + dino.naam + " eet vlees: " + dino.vleeseter);
+        console.log(trex);
+        console.log(triceratops);
+
+        trex.eatFood(triceratops);
+        console.log("leeft " + triceratops.naam + "? "+ triceratops.leeft);
     }
 }
-
-
-
 
 let app = new App();
 app.runApplication();
