@@ -1,9 +1,17 @@
+class Plant {
+    constructor(naam) {
+        this.naam = naam;
+        this.leeft = true;
+    }
+}
+
 class Dino {
     eatFood(foodToEat) {
-        foodToEat.leeft=false;
-        this.honger=false;
-        console.log("ik ben een " + this.naam)
-        console.log("mijn honger: " + this.honger)
+        console.log("ik eet nu " + foodToEat.naam);
+        foodToEat.leeft = false;
+        this.honger = false;
+        console.log(`I am a ${this.naam}`);
+        console.log(`My hunger: ${this.honger}`);
     }
 
     constructor(naam, vleeseter, leeftijd) {
@@ -22,11 +30,20 @@ class App {
         let trex = new Dino("T-Rex", true, 10);
         let triceratops = new Dino("Triceratops", false, 20);
 
+        let grass = new Plant("Gras");
+        let bush = new Plant("Struik");
+
         console.log(trex);
         console.log(triceratops);
 
+        console.log(grass);
+        console.log(bush);
+
+        triceratops.eatFood(grass);
+        console.log(`Is ${grass.naam} alive? ${grass.leeft}`);
+
         trex.eatFood(triceratops);
-        console.log("leeft " + triceratops.naam + "? "+ triceratops.leeft);
+        console.log(`Is ${triceratops.naam} alive? ${triceratops.leeft}`);
     }
 }
 
