@@ -1,11 +1,11 @@
-class Plant {
+export class Plant {
     constructor(naam) {
         this.naam = naam;
         this.leeft = true;
     }
 }
 
-export class Dino {
+class Dino {
     eatFood(foodToEat) {
         console.log("ik eet nu " + foodToEat.naam);
         foodToEat.leeft = false;
