@@ -35,7 +35,6 @@ class App {
                 genre: "rock / hard rock / gothic rock",
             }
         };
-        console.log(spotifyPlaylist);
         console.log("Favorite Artist:", spotifyPlaylist.favoriteArtist);
 
         for (let i = 0; i < spotifyPlaylist.songs.length; i++) {
@@ -59,26 +58,37 @@ class App {
         console.log(`Basic creature has ${magicaart.defense} defense`);
         console.log(`You played: ${oneCost} and ${twoCost}`);
 
-
-        console.log(magicaart);
+        console.log("Magicaart:", magicaart);
         let dataToSend = JSON.stringify(magicaart);
-        console.log(dataToSend);
+        console.log("Data to send:", dataToSend);
 
-        console.log(spotifyPlaylist);
+        console.log("Spotify Playlist:", spotifyPlaylist);
         let dataToSend2 = JSON.stringify(spotifyPlaylist);
-        console.log(dataToSend2)
+        console.log("Data to send 2:", dataToSend2);
 
         let coolJson = '{"legosetname":"Geluksdraak","itemnumber":80112,"pieces":1171,"releaseDate":"Binnenkort op 1 januari 2024","price":79.99}';
 
         let objectFromString = JSON.parse(coolJson);
-        console.log(objectFromString)
-
         console.log("Lego Set Properties:");
         console.log("Lego Set Name:", objectFromString.legosetname);
         console.log("Item Number:", objectFromString.itemnumber);
         console.log("Number of Pieces:", objectFromString.pieces);
         console.log("Release Date:", objectFromString.releaseDate);
         console.log("Price:", objectFromString.price);
+
+        
+        fetch("lego.json")
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then((json) => {
+            console.log("From the net==============");
+            console.log(json);
+        });
+        
     }
 }
 
