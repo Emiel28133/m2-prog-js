@@ -58,6 +58,27 @@ class App {
         console.log(`Basic creature has ${magicaart.attack} attack`);
         console.log(`Basic creature has ${magicaart.defense} defense`);
         console.log(`You played: ${oneCost} and ${twoCost}`);
+
+
+        console.log(magicaart);
+        let dataToSend = JSON.stringify(magicaart);
+        console.log(dataToSend);
+
+        console.log(spotifyPlaylist);
+        let dataToSend2 = JSON.stringify(spotifyPlaylist);
+        console.log(dataToSend2)
+
+        let coolJson = '{"legosetname":"Geluksdraak","itemnumber":80112,"pieces":1171,"releaseDate":"Binnenkort op 1 januari 2024","price":79.99}';
+
+        let objectFromString = JSON.parse(coolJson);
+        console.log(objectFromString)
+
+        console.log("Lego Set Properties:");
+        console.log("Lego Set Name:", objectFromString.legosetname);
+        console.log("Item Number:", objectFromString.itemnumber);
+        console.log("Number of Pieces:", objectFromString.pieces);
+        console.log("Release Date:", objectFromString.releaseDate);
+        console.log("Price:", objectFromString.price);
     }
 }
 
